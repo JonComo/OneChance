@@ -7,39 +7,33 @@
 //
 
 #import "OCViewController.h"
-#import "OCMyScene.h"
+#import "OCGameScene.h"
 
 @implementation OCViewController
+{
+    OCGameScene *gameScene;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     // Configure the view.
-    SKView * skView = (SKView *)self.view;
+    SKView *skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [OCMyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    gameScene = [OCGameScene sceneWithSize:CGSizeMake(skView.frame.size.height, skView.frame.size.width)];
+    gameScene.scaleMode = SKSceneScaleModeAspectFit;
     
     // Present the scene.
-    [skView presentScene:scene];
+    [skView presentScene:gameScene];
 }
 
-- (BOOL)shouldAutorotate
+-(BOOL)prefersStatusBarHidden
 {
     return YES;
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
 }
 
 - (void)didReceiveMemoryWarning

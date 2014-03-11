@@ -16,14 +16,17 @@
 		86A611F918CEDC3F001E113E /* OCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A611F818CEDC3F001E113E /* OCAppDelegate.m */; };
 		86A611FC18CEDC3F001E113E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86A611FA18CEDC3F001E113E /* Main.storyboard */; };
 		86A611FF18CEDC3F001E113E /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A611FE18CEDC3F001E113E /* OCViewController.m */; };
-		86A6120218CEDC3F001E113E /* OCMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6120118CEDC3F001E113E /* OCMyScene.m */; };
-		86A6120418CEDC3F001E113E /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6120318CEDC3F001E113E /* Spaceship.png */; };
 		86A6120618CEDC3F001E113E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86A6120518CEDC3F001E113E /* Images.xcassets */; };
 		86A6120D18CEDC40001E113E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A6120C18CEDC40001E113E /* XCTest.framework */; };
 		86A6120E18CEDC40001E113E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A611E618CEDC3F001E113E /* Foundation.framework */; };
 		86A6120F18CEDC40001E113E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A611EA18CEDC3F001E113E /* UIKit.framework */; };
 		86A6121718CEDC40001E113E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86A6121518CEDC40001E113E /* InfoPlist.strings */; };
 		86A6121918CEDC40001E113E /* OneChanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6121818CEDC40001E113E /* OneChanceTests.m */; };
+		86A6122418CEDC82001E113E /* OCGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122318CEDC82001E113E /* OCGameScene.m */; };
+		86A6122918CEDD06001E113E /* OCCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122818CEDD06001E113E /* OCCharacter.m */; };
+		86A6122D18CEDD17001E113E /* OCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122C18CEDD17001E113E /* OCSprite.m */; };
+		86A6123318CEF41E001E113E /* JCControlPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122F18CEF41E001E113E /* JCControlPad.m */; };
+		86A6123418CEF41E001E113E /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6123118CEF41E001E113E /* JCMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,15 +54,23 @@
 		86A611FB18CEDC3F001E113E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86A611FD18CEDC3F001E113E /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		86A611FE18CEDC3F001E113E /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
-		86A6120018CEDC3F001E113E /* OCMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMyScene.h; sourceTree = "<group>"; };
-		86A6120118CEDC3F001E113E /* OCMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMyScene.m; sourceTree = "<group>"; };
-		86A6120318CEDC3F001E113E /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		86A6120518CEDC3F001E113E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86A6120B18CEDC40001E113E /* OneChanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneChanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A6120C18CEDC40001E113E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		86A6121418CEDC40001E113E /* OneChanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneChanceTests-Info.plist"; sourceTree = "<group>"; };
 		86A6121618CEDC40001E113E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86A6121818CEDC40001E113E /* OneChanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneChanceTests.m; sourceTree = "<group>"; };
+		86A6122218CEDC82001E113E /* OCGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGameScene.h; sourceTree = "<group>"; };
+		86A6122318CEDC82001E113E /* OCGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCGameScene.m; sourceTree = "<group>"; };
+		86A6122718CEDD06001E113E /* OCCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCCharacter.h; sourceTree = "<group>"; };
+		86A6122818CEDD06001E113E /* OCCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCCharacter.m; sourceTree = "<group>"; };
+		86A6122B18CEDD17001E113E /* OCSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSprite.h; sourceTree = "<group>"; };
+		86A6122C18CEDD17001E113E /* OCSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSprite.m; sourceTree = "<group>"; };
+		86A6122E18CEF41E001E113E /* JCControlPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCControlPad.h; sourceTree = "<group>"; };
+		86A6122F18CEF41E001E113E /* JCControlPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCControlPad.m; sourceTree = "<group>"; };
+		86A6123018CEF41E001E113E /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
+		86A6123118CEF41E001E113E /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
+		86A6123218CEF41E001E113E /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +120,11 @@
 		86A611E518CEDC3F001E113E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86A6122E18CEF41E001E113E /* JCControlPad.h */,
+				86A6122F18CEF41E001E113E /* JCControlPad.m */,
+				86A6123018CEF41E001E113E /* JCMath.h */,
+				86A6123118CEF41E001E113E /* JCMath.m */,
+				86A6123218CEF41E001E113E /* Macros.h */,
 				86A611E618CEDC3F001E113E /* Foundation.framework */,
 				86A611E818CEDC3F001E113E /* CoreGraphics.framework */,
 				86A611EA18CEDC3F001E113E /* UIKit.framework */,
@@ -124,11 +140,9 @@
 				86A611F718CEDC3F001E113E /* OCAppDelegate.h */,
 				86A611F818CEDC3F001E113E /* OCAppDelegate.m */,
 				86A611FA18CEDC3F001E113E /* Main.storyboard */,
-				86A611FD18CEDC3F001E113E /* OCViewController.h */,
-				86A611FE18CEDC3F001E113E /* OCViewController.m */,
-				86A6120018CEDC3F001E113E /* OCMyScene.h */,
-				86A6120118CEDC3F001E113E /* OCMyScene.m */,
-				86A6120318CEDC3F001E113E /* Spaceship.png */,
+				86A6122518CEDCF4001E113E /* View */,
+				86A6122618CEDCF7001E113E /* Scenes */,
+				86A6122A18CEDD0B001E113E /* Model */,
 				86A6120518CEDC3F001E113E /* Images.xcassets */,
 				86A611EF18CEDC3F001E113E /* Supporting Files */,
 			);
@@ -162,6 +176,35 @@
 				86A6121518CEDC40001E113E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86A6122518CEDCF4001E113E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86A611FD18CEDC3F001E113E /* OCViewController.h */,
+				86A611FE18CEDC3F001E113E /* OCViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		86A6122618CEDCF7001E113E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				86A6122218CEDC82001E113E /* OCGameScene.h */,
+				86A6122318CEDC82001E113E /* OCGameScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		86A6122A18CEDD0B001E113E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86A6122B18CEDD17001E113E /* OCSprite.h */,
+				86A6122C18CEDD17001E113E /* OCSprite.m */,
+				86A6122718CEDD06001E113E /* OCCharacter.h */,
+				86A6122818CEDD06001E113E /* OCCharacter.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +286,6 @@
 			files = (
 				86A611F318CEDC3F001E113E /* InfoPlist.strings in Resources */,
 				86A6120618CEDC3F001E113E /* Images.xcassets in Resources */,
-				86A6120418CEDC3F001E113E /* Spaceship.png in Resources */,
 				86A611FC18CEDC3F001E113E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A6120218CEDC3F001E113E /* OCMyScene.m in Sources */,
 				86A611F918CEDC3F001E113E /* OCAppDelegate.m in Sources */,
 				86A611F518CEDC3F001E113E /* main.m in Sources */,
+				86A6123418CEF41E001E113E /* JCMath.m in Sources */,
+				86A6122418CEDC82001E113E /* OCGameScene.m in Sources */,
 				86A611FF18CEDC3F001E113E /* OCViewController.m in Sources */,
+				86A6122D18CEDD17001E113E /* OCSprite.m in Sources */,
+				86A6122918CEDD06001E113E /* OCCharacter.m in Sources */,
+				86A6123318CEF41E001E113E /* JCControlPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
