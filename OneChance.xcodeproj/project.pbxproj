@@ -27,6 +27,7 @@
 		86A6122D18CEDD17001E113E /* OCSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122C18CEDD17001E113E /* OCSprite.m */; };
 		86A6123318CEF41E001E113E /* JCControlPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6122F18CEF41E001E113E /* JCControlPad.m */; };
 		86A6123418CEF41E001E113E /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A6123118CEF41E001E113E /* JCMath.m */; };
+		86A6124118CF07A4001E113E /* coastArmor.png in Resources */ = {isa = PBXBuildFile; fileRef = 86A6123718CF07A4001E113E /* coastArmor.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		86A6123018CEF41E001E113E /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
 		86A6123118CEF41E001E113E /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
 		86A6123218CEF41E001E113E /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		86A6123718CF07A4001E113E /* coastArmor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coastArmor.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		86A611EE18CEDC3F001E113E /* OneChance */ = {
 			isa = PBXGroup;
 			children = (
+				86A6123518CF07A4001E113E /* media */,
 				86A611F718CEDC3F001E113E /* OCAppDelegate.h */,
 				86A611F818CEDC3F001E113E /* OCAppDelegate.m */,
 				86A611FA18CEDC3F001E113E /* Main.storyboard */,
@@ -205,6 +208,22 @@
 				86A6122818CEDD06001E113E /* OCCharacter.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		86A6123518CF07A4001E113E /* media */ = {
+			isa = PBXGroup;
+			children = (
+				86A6123618CF07A4001E113E /* coast */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+		86A6123618CF07A4001E113E /* coast */ = {
+			isa = PBXGroup;
+			children = (
+				86A6123718CF07A4001E113E /* coastArmor.png */,
+			);
+			path = coast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A6124118CF07A4001E113E /* coastArmor.png in Resources */,
 				86A611F318CEDC3F001E113E /* InfoPlist.strings in Resources */,
 				86A6120618CEDC3F001E113E /* Images.xcassets in Resources */,
 				86A611FC18CEDC3F001E113E /* Main.storyboard in Resources */,
@@ -523,6 +543,7 @@
 				86A6121E18CEDC40001E113E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86A6121F18CEDC40001E113E /* Build configuration list for PBXNativeTarget "OneChanceTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +552,7 @@
 				86A6122118CEDC40001E113E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

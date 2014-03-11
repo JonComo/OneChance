@@ -29,6 +29,8 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.backgroundColor = [UIColor whiteColor];
+        
         objects = [NSMutableArray array];
         _world = [[SKSpriteNode alloc] init];
         [self addChild:_world];
@@ -40,7 +42,7 @@
         ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
         ground.physicsBody.dynamic = NO;
         
-        player = [[OCCharacter alloc] initWithSize:CGSizeMake(34, 70) texturePrefix:@"knight"];
+        player = [[OCCharacter alloc] initWithSize:CGSizeMake(34, 90) textureName:@"coastArmor"];
         player.position = CGPointMake(100, 100);
         [objects addObject:player];
         [_world addChild:player];
@@ -49,7 +51,7 @@
         player.runDirection = OCDirectionRight;
         
         
-        OCCharacter *enemy = [[OCCharacter alloc] initWithSize:CGSizeMake(34, 70) texturePrefix:@"knight"];
+        OCCharacter *enemy = [[OCCharacter alloc] initWithSize:CGSizeMake(34, 90) textureName:@"coastArmor"];
         enemy.position = CGPointMake(400, 100);
         [_world addChild:enemy];
         [objects addObject:enemy];

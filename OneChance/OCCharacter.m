@@ -16,16 +16,45 @@
     SKPhysicsJointPin *wheelJoint;
 }
 
--(id)initWithSize:(CGSize)size texturePrefix:(NSString *)texturePrefix
+-(id)initWithSize:(CGSize)size textureName:(NSString *)textureName
 {
     if (self = [super initWithColor:nil size:size]) {
         //init
-        self.color = [UIColor orangeColor];
         
         _facing = OCDirectionRight;
         
         //Load textures based on prefix for legs and body and head etc.
-        
+        if (textureName)
+        {
+            SKTexture *texture = [SKTexture textureWithImageNamed:textureName];
+            texture.filteringMode = SKTextureFilteringNearest;
+            
+            CGSize s = texture.size;
+            
+            SKTexture *helmTex = [SKTexture textureWithRect:CGRectMake(9.0/s.width, 25.0/s.height, 18.0/s.width, 11.0/s.height) inTexture:texture];
+            helmTex.filteringMode = SKTextureFilteringNearest;
+            SKSpriteNode *helm = [[SKSpriteNode alloc] initWithTexture:helmTex];
+            helm.position = CGPointMake(0, size.height/2);
+            helm.xScale = helm.yScale = 3;
+            [self addChild:helm];
+            
+            //28 18 7 17
+            SKTexture *upperLegTex = [SKTexture textureWithRect:CGRectMake(28.0/s.width, 19.0/s.height, 7.0/s.width, (s.height-20.0)/s.height) inTexture:texture];
+            upperLegTex.filteringMode = SKTextureFilteringNearest;
+            
+            SKSpriteNode *upperLeg = [[SKSpriteNode alloc] initWithTexture:upperLegTex];
+            upperLeg.xScale = upperLeg.yScale = 3;
+            upperLeg.position = CGPointMake(-size.width/2, -size.height/2);
+            [self addChild:upperLeg];
+            
+            
+            SKTexture *bodyTexture = [SKTexture textureWithRect:CGRectMake(9.0/s.width, 1.0/s.height, 18.0/s.width, 23.0/s.height) inTexture:texture];
+            bodyTexture.filteringMode = SKTextureFilteringNearest;
+            
+            SKSpriteNode *body = [[SKSpriteNode alloc] initWithTexture:bodyTexture];
+            [self addChild:body];
+            body.xScale = body.yScale = 3;
+        }
     }
     
     return self;
@@ -39,7 +68,7 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width, self.size.height * 3/4)];
     self.physicsBody.allowsRotation = NO;
     
-    wheel = [[SKSpriteNode alloc] initWithColor:[UIColor redColor] size:CGSizeMake(self.size.width, self.size.width)];
+    wheel = [[SKSpriteNode alloc] initWithColor:[UIColor clearColor] size:CGSizeMake(self.size.width, self.size.width)];
     wheel.position = CGPointMake(self.position.x, self.position.y - self.size.height + wheel.size.height);
     wheel.alpha = 0.4;
     
@@ -64,6 +93,11 @@
     }
     
     [self lookForward];
+}
+
+-(void)setFacing:(OCDirection)facing
+{
+    _facing = facing;
 }
 
 -(void)lookForward

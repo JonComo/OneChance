@@ -20,9 +20,9 @@ typedef enum
 @property (nonatomic, copy) NSString *texturePrefix;
 
 @property OCDirection runDirection;
-@property OCDirection facing;
+@property (nonatomic, assign) OCDirection facing;
 
--(id)initWithSize:(CGSize)size texturePrefix:(NSString *)texturePrefix;
+-(id)initWithSize:(CGSize)size textureName:(NSString *)textureName;
 -(void)initPhysics;
 
 -(void)remove;
